@@ -183,7 +183,7 @@ export default function Hero() {
             </motion.button>
             <motion.a
               href="/resume-naveen.pdf"
-              download
+              download="Naveen-Kumar-Resume.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
               className="flex items-center gap-2 px-8 py-4 border border-primary text-primary-light rounded-xl font-semibold text-base hover:bg-primary/10 hover:shadow-glow transition-all duration-300"

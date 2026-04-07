@@ -107,7 +107,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <motion.a
               href="/resume-naveen.pdf"
-              download
+              download="Naveen-Kumar-Resume.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
               className="flex items-center gap-2 px-4 py-2 border border-primary text-primary-light rounded-lg text-sm font-semibold hover:bg-primary/10 hover:shadow-glow transition-all duration-300"
@@ -155,7 +155,7 @@ export default function Navbar() {
               ))}
               <a
                 href="/resume-naveen.pdf"
-                download
+                download="Naveen-Kumar-Resume.pdf"
                 className="flex items-center gap-2 mt-3 px-4 py-3 border border-primary text-primary-light rounded-lg text-sm font-semibold hover:bg-primary/10 transition-all"
               >
                 <Download size={15} />
