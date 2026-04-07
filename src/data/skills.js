@@ -1,0 +1,97 @@
+import {
+  Code2,
+  Globe,
+  Database,
+  Server,
+  BarChart2,
+  Cpu,
+  TrendingUp,
+  Monitor,
+  Layers,
+  GitBranch,
+  Bot,
+  Sparkles,
+  Zap,
+} from "lucide-react";
+import { FiGithub, FiFigma } from "react-icons/fi";
+
+export const skillCategories = [
+  {
+    id: "frontend",
+    title: "Frontend Development",
+    icon: Globe,
+    color: "from-blue-500 to-blue-700",
+    borderColor: "border-blue-500/30",
+    glowColor: "rgba(37,99,235,0.2)",
+    skills: [
+      { name: "React.js", level: 88, icon: Code2 },
+      { name: "JavaScript ES6+", level: 85, icon: Code2 },
+      { name: "HTML5", level: 92, icon: Monitor },
+      { name: "CSS3", level: 85, icon: Layers },
+      { name: "Bootstrap", level: 80, icon: Layers },
+      { name: "Git & GitHub", level: 82, icon: GitBranch },
+    ],
+  },
+  {
+    id: "backend",
+    title: "Backend & Database",
+    icon: Server,
+    color: "from-violet-500 to-violet-700",
+    borderColor: "border-violet-500/30",
+    glowColor: "rgba(124,58,237,0.2)",
+    skills: [
+      { name: "Java (OOP)", level: 80, icon: Code2 },
+      { name: "MySQL", level: 75, icon: Database },
+      { name: "REST API Concepts", level: 72, icon: Server },
+    ],
+  },
+  {
+    id: "data",
+    title: "Data & Machine Learning",
+    icon: BarChart2,
+    color: "from-emerald-500 to-teal-600",
+    borderColor: "border-emerald-500/30",
+    glowColor: "rgba(16,185,129,0.2)",
+    skills: [
+      { name: "Machine Learning", level: 75, icon: TrendingUp },
+      { name: "Data Visualisation", level: 78, icon: BarChart2 },
+      { name: "IoT Data Processing", level: 70, icon: Cpu },
+    ],
+  },
+  {
+    id: "ai",
+    title: "AI Tools",
+    icon: Sparkles,
+    badge: "NEW", // For conditional UI badge
+    gridCols: 2, // Spans 2 cols to balance the layout
+    color: "from-violet-500 to-violet-700",
+    borderColor: "border-violet-500/30",
+    glowColor: "rgba(124,58,237,0.2)",
+    skills: [
+      { name: "ChatGPT", level: 95, icon: Bot },
+      { name: "Claude AI", level: 90, icon: Sparkles },
+      { name: "GitHub Copilot", level: 88, icon: Bot },
+      { name: "Gemini", level: 85, icon: Sparkles },
+      { name: "Perplexity", level: 90, icon: Bot },
+      { name: "Cursor", level: 85, icon: Zap },
+      { name: "Windsurf", level: 80, icon: Zap },
+      { name: "Antigravity", level: 85, icon: Sparkles },
+      { name: "Bolt.new", level: 80, icon: Zap },
+      { name: "v0 by Vercel", level: 82, icon: Bot },
+    ],
+  },
+  {
+    id: "tools",
+    title: "Tools & Environment",
+    icon: Monitor,
+    color: "from-orange-500 to-amber-600",
+    borderColor: "border-orange-500/30",
+    glowColor: "rgba(249,115,22,0.2)",
+    skills: [
+      { name: "VS Code", level: 90, icon: Monitor },
+      { name: "GitHub Pages", level: 85, icon: FiGithub },
+      { name: "Figma", level: 70, icon: FiFigma },
+      { name: "Eclipse IDE", level: 75, icon: Monitor },
+    ],
+  },
+];
