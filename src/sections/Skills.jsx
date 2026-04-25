@@ -71,7 +71,7 @@ function SkillCard({ category, index }) {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 bg-slate-900/30 relative overflow-hidden">
+    <section id="skills" className="py-16 sm:py-24 bg-slate-900/30 relative overflow-hidden">
       <div className="orb orb-violet w-96 h-96 bottom-0 left-0 opacity-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -87,7 +87,7 @@ export default function Skills() {
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mt-4" />
         </AnimatedSection>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
           {skillCategories.map((cat, i) => (
             <div key={cat.id} className={`w-full ${cat.gridCols === 2 ? 'lg:col-span-2' : ''}`}>
               <SkillCard category={cat} index={i} />

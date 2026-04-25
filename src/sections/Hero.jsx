@@ -99,7 +99,7 @@ export default function Hero() {
       <div className="orb orb-violet w-[500px] h-[500px] -bottom-20 -right-20 opacity-30" />
       <div className="orb orb-blue w-[400px] h-[400px] top-1/2 right-1/4 opacity-20" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-24 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-28 pb-16 sm:py-24 w-full">
         <div className="max-w-4xl">
           {/* Greeting */}
           <motion.div
@@ -119,7 +119,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.08] mb-6"
           >
             Building Web Apps{" "}
             <br className="hidden sm:block" />
@@ -170,13 +170,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.65 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4"
           >
             <motion.button
               onClick={scrollToProjects}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              className="flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-xl font-semibold text-base shadow-lg hover:bg-primary-dark hover:shadow-glow transition-all duration-300"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white rounded-xl font-semibold text-base shadow-lg hover:bg-primary-dark hover:shadow-glow transition-all duration-300"
             >
               <Briefcase size={18} />
               View My Projects
@@ -186,7 +186,7 @@ export default function Hero() {
               download="Naveen-Kumar-Resume.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              className="flex items-center gap-2 px-8 py-4 border border-primary text-primary-light rounded-xl font-semibold text-base hover:bg-primary/10 hover:shadow-glow transition-all duration-300"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 border border-primary text-primary-light rounded-xl font-semibold text-base hover:bg-primary/10 hover:shadow-glow transition-all duration-300"
             >
               <Download size={18} />
               Download Resume
@@ -198,10 +198,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="flex flex-wrap gap-6 mt-14 pt-8 border-t border-slate-800/60"
+            className="grid grid-cols-2 sm:flex sm:flex-wrap gap-6 mt-10 sm:mt-14 pt-8 border-t border-slate-800/60"
           >
             {[
-              { value: "4+", label: "Projects Delivered" },
+              { value: "5+", label: "Projects Delivered" },
               { value: "87%", label: "ML Model Accuracy" },
               { value: "2+", label: "Real Client Sites" },
               { value: "2024", label: "B.Tech Graduate" },

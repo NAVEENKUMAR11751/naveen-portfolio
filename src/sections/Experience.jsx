@@ -24,7 +24,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 bg-slate-900/30 relative overflow-hidden">
+    <section id="experience" className="py-16 sm:py-24 bg-slate-900/30 relative overflow-hidden">
       <div className="orb orb-violet w-80 h-80 bottom-10 right-0 opacity-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -39,7 +39,7 @@ export default function Experience() {
         <div className="max-w-3xl mx-auto">
           {experiences.map((exp, idx) => (
             <AnimatedSection key={idx} delay={0.1}>
-              <div className="relative flex gap-6">
+              <div className="relative flex gap-3 sm:gap-6">
                 {/* Timeline line */}
                 <div className="flex flex-col items-center">
                   <motion.div

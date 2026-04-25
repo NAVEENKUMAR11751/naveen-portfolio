@@ -28,7 +28,7 @@ const certifications = [
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 relative overflow-hidden">
+    <section id="education" className="py-16 sm:py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-12">
           
@@ -91,7 +91,7 @@ export default function Education() {
               </h2>
             </AnimatedSection>
 
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 xs:grid-cols-2 gap-4">
               {certifications.map((cert, i) => (
                 <AnimatedSection key={i} delay={0.1 + i * 0.1}>
                   <motion.div 

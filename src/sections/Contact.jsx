@@ -36,7 +36,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-slate-900/60">
+    <section id="contact" className="py-16 sm:py-24 relative overflow-hidden bg-slate-900/60">
       <div className="orb orb-blue w-[500px] h-[500px] bottom-0 right-0 opacity-20" />
       
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
@@ -52,7 +52,7 @@ export default function Contact() {
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mt-6" />
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-5 gap-10 bg-slate-800/40 border border-slate-700/50 rounded-3xl p-6 md:p-10 backdrop-blur-xl shadow-2xl">
+        <div className="grid md:grid-cols-5 gap-8 bg-slate-800/40 border border-slate-700/50 rounded-3xl p-5 sm:p-8 md:p-10 backdrop-blur-xl shadow-2xl">
           
           {/* Contact Info */}
           <div className="md:col-span-2 flex flex-col justify-between">
@@ -104,9 +104,9 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <div className="md:col-span-3 bg-slate-900/50 rounded-2xl p-6 md:p-8 border border-slate-700/50">
-            <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid sm:grid-cols-2 gap-5">
+          <div className="md:col-span-3 bg-slate-900/50 rounded-2xl p-5 sm:p-6 md:p-8 border border-slate-700/50">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+              <div className="grid xs:grid-cols-2 gap-4 sm:gap-5">
                 <div className="space-y-1.5">
                   <label htmlFor="user_name" className="text-sm font-medium text-slate-300 ml-1">Full Name</label>
                   <input

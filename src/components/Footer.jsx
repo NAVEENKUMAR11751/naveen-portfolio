@@ -9,9 +9,14 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start">
-            <span className="text-white font-bold text-xl mb-1">
-              NK<span className="text-primary">.</span>
-            </span>
+            <div className="flex items-center gap-2 mb-1">
+              <div className="w-8 h-8 rounded-xl overflow-hidden bg-white/5 ring-1 ring-primary/20 shrink-0">
+                <img src="/logo.png" alt="NK Logo" className="w-full h-full object-contain" />
+              </div>
+              <span className="text-white font-bold text-xl">
+                NK<span className="text-primary">.</span>
+              </span>
+            </div>
             <p className="text-slate-500 text-sm">
               Frontend & Full-Stack Developer
             </p>

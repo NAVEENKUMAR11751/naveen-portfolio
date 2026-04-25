@@ -12,7 +12,7 @@ const highlights = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-16 sm:py-24 relative overflow-hidden">
       {/* Subtle bg orb */}
       <div className="orb orb-blue w-96 h-96 top-0 right-0 opacity-10" />
 
@@ -25,8 +25,59 @@ export default function About() {
         </AnimatedSection>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Avatar side — shows FIRST on mobile via order */}
+          <AnimatedSection delay={0.15} direction="left" className="order-first lg:order-last">
+            <div className="flex justify-center">
+              <div className="relative">
+                {/* Outer glow ring */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-[-8px] sm:inset-[-12px] rounded-full border border-dashed border-primary/30"
+                />
+                <motion.div
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-[-16px] sm:inset-[-24px] rounded-full border border-dashed border-accent/20"
+                />
+
+                {/* Avatar container */}
+                <div className="avatar-border w-44 h-44 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 flex items-center justify-center">
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center overflow-hidden">
+                    <div className="w-full h-full bg-gradient-to-br from-primary/10 to-accent/10 flex flex-col items-center justify-center p-6">
+                      <img
+                        src="/logo.png"
+                        alt="Naveen Kumar Logo"
+                        className="w-full h-full object-contain drop-shadow-lg"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating badge – hidden on very small screens */}
+                <motion.div
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  className="hidden xs:flex absolute -bottom-4 -right-4 bg-slate-800 border border-primary/40 rounded-xl px-3 py-2 shadow-glow items-center gap-2"
+                >
+                  <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-white text-xs font-semibold">Available for hire</span>
+                </motion.div>
+
+                {/* React badge – hidden on very small screens */}
+                <motion.div
+                  animate={{ y: [0, 8, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="hidden xs:flex absolute -top-4 -left-4 bg-slate-800 border border-accent/40 rounded-xl px-3 py-2 items-center"
+                >
+                  <span className="text-white text-xs font-mono">⚛️ React Dev</span>
+                </motion.div>
+              </div>
+            </div>
+          </AnimatedSection>
+
           {/* Text side */}
-          <AnimatedSection delay={0.1}>
+          <AnimatedSection delay={0.1} className="order-last lg:order-first">
             <div className="space-y-6">
               <p className="text-slate-300 text-lg leading-relaxed">
                 I am a{" "}
@@ -66,59 +117,6 @@ export default function About() {
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
-          </AnimatedSection>
-
-          {/* Avatar side */}
-          <AnimatedSection delay={0.25} direction="left">
-            <div className="flex justify-center">
-              <div className="relative">
-                {/* Outer glow ring */}
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-[-8px] sm:inset-[-12px] rounded-full border border-dashed border-primary/30"
-                />
-                <motion.div
-                  animate={{ rotate: -360 }}
-                  transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-[-16px] sm:inset-[-24px] rounded-full border border-dashed border-accent/20"
-                />
-
-                {/* Avatar container */}
-                <div className="avatar-border w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 flex items-center justify-center">
-                  <div className="w-full h-full rounded-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center overflow-hidden">
-                    {/* Initials avatar */}
-                    <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex flex-col items-center justify-center">
-                      <div className="text-7xl md:text-8xl font-black gradient-text select-none">
-                        NK
-                      </div>
-                      <div className="text-slate-500 text-sm mt-2 font-mono">Naveen Kumar</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating badge */}
-                <motion.div
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -bottom-4 -right-4 bg-slate-800 border border-primary/40 rounded-xl px-4 py-2 shadow-glow"
-                >
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    <span className="text-white text-xs font-semibold">Available for hire</span>
-                  </div>
-                </motion.div>
-
-                {/* React badge */}
-                <motion.div
-                  animate={{ y: [0, 8, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -top-4 -left-4 bg-slate-800 border border-accent/40 rounded-xl px-3 py-2"
-                >
-                  <span className="text-white text-xs font-mono">⚛️ React Dev</span>
-                </motion.div>
               </div>
             </div>
           </AnimatedSection>

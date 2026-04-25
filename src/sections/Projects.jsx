@@ -5,7 +5,7 @@ import { projects } from "../data/projects";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 relative overflow-hidden">
+    <section id="projects" className="py-16 sm:py-24 relative overflow-hidden">
       <div className="orb orb-blue w-96 h-96 top-20 right-0 opacity-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -21,7 +21,7 @@ export default function Projects() {
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mt-4" />
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
           {projects.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} />
           ))}

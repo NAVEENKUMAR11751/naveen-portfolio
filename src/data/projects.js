@@ -16,6 +16,20 @@ export const projects = [
   },
   {
     id: 2,
+    emoji: "📚",
+    title: "Knowledge Dabba – Smart Study Management",
+    summary:
+      "Full-featured study management platform with modules for Knowledge Manager, Sticky Notes, Timetable Planner, Revision Tracker, and Reports Dashboard. Google Drive API integration for secure cloud sync and spaced-repetition-based revision tracking.",
+    problem:
+      "Students lacked a unified tool to manage notes, schedules, and revision intelligently — juggling multiple apps caused lost context and inconsistent study habits.",
+    impact: "Spaced repetition + confidence scoring · Google Drive cloud sync · Fully responsive · Live on Vercel",
+    stack: ["React.js", "JavaScript", "Google Drive API", "Vercel", "GitHub"],
+    github: "https://github.com/NAVEENKUMAR11751/knowledge-dabba",
+    demo: "https://knowledge-dabba.vercel.app",
+    featured: true,
+  },
+  {
+    id: 3,
     emoji: "🏗️",
     title: "BL Engineering Works",
     summary:
@@ -29,7 +43,7 @@ export const projects = [
     featured: true,
   },
   {
-    id: 3,
+    id: 4,
     emoji: "💼",
     title: "Vishwa Software Solutions",
     summary:
@@ -43,7 +57,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 4,
+    id: 5,
     emoji: "🧮",
     title: "Interest Calculator Web App",
     summary:
